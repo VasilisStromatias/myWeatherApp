@@ -1,13 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import Card from './view/Shared/Card';
 import reportWebVitals from './reportWebVitals';
+import '../src/view/styles/sass/_main.scss';
+import '../src/view/styles/sass/_global.scss';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Card />
   </React.StrictMode>
 );
 
