@@ -1,3 +1,56 @@
 @import './config';
 @import './mixins';
+@import './fonts';
 
+
+.wa-wrapper{
+    max-width: 520px;
+    width: 97%;
+    padding: 0 10px;
+    margin: 20px auto;
+}
+
+.wa-inner{
+    border: 2px solid rgb(67, 67, 191);
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+.wa-temp-hum{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+.wa-conditions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.wa-city{
+    background-color: rgb(67, 67, 191);
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    padding: 13px;
+    position: relative;
+    & .wa-date{
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        color: aliceblue;
+        @include font-size-16;
+    }
+    & span{
+        @include font-size-13;
+        font-weight: 700;
+        color: aliceblue;
+        & strong{
+            @include font-size-24;
+            font-weight: 700;
+            color: aliceblue;
+        }
+    }
+}

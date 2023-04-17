@@ -1,0 +1,12 @@
+@mixin font-size-13{
+    font-size: clamp(12px,1vw,13px);
+}
+@mixin font-size-16{
+    font-size: clamp(14px,1vw,16px);
+}
+@mixin font-size-18{
+    font-size: clamp(16px,1vw,18px);
+}
+@mixin font-size-24{
+    font-size: clamp(20px,2vw,24px);
+}
