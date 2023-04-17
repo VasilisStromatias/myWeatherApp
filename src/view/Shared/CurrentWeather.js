@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 
-function Card(){
+function CurrentWeather(){
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
   const [data, setData] = useState([]);
@@ -16,7 +16,9 @@ useEffect(() => {
         setLong(position.coords.longitude);
       });
 
-      await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=1ee16b2b7b1692c2baaa3d0534f0bb02`)
+      // CURRENT WEATHER
+      await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=1ee16b2b7b1692c2baaa3d0534f0bb02`) //current position
+      // await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=38.0398760&lon=23.7392700&units=metric&appid=1ee16b2b7b1692c2baaa3d0534f0bb02`) //nea philadelphia
       .then(res => res.json())
       .then(result => {
         setData(result)
@@ -66,4 +68,4 @@ return(
 );
 }
 
-export default Card;
+export default CurrentWeather;
